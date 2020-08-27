@@ -106,7 +106,7 @@ airflow_encrypt_s3_logs: False
 airflow_s3_log_folder: # DEPRECATED
 
 ## DB
-airflow_database_conn: mysql://root:root@localhost:3306/airflow.db
+airflow_database_conn: mysql://root:root@localhost:3306/airflow
 airflow_database_pool_size: 5
 airflow_database_pool_recycle: 2000
 
