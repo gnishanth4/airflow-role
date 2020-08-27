@@ -79,7 +79,7 @@ airflow_load_examples: True
 
 # The executor class that airflow should use. Choices include
 # SequentialExecutor, LocalExecutor, CeleryExecutor, DaskExecutor
-airflow_executor: SequentialExecutor
+airflow_executor: LocalExecutor
 
 airflow_parallelism: 32
 airflow_dag_concurrency: 16
@@ -106,7 +106,7 @@ airflow_encrypt_s3_logs: False
 airflow_s3_log_folder: # DEPRECATED
 
 ## DB
-airflow_database_conn: sqlite:///{{ airflow_home }}/airflow.db
+airflow_database_conn: mysql://root:root@localhost:3306/airflow.db
 airflow_database_pool_size: 5
 airflow_database_pool_recycle: 2000
 
