@@ -48,6 +48,22 @@
     - restart airflow-scheduler
     - restart airflow-worker
     - restart airflow-flower
+    
+- name: Airflow | Upgrade DB
+  command: "{{ airflow_executable }}" upgradedb
+  environment:
+   AIRFLOW_HOME: "{{ airflow_user }}"
+  become: true
+  become_user: "{{ airflow_user }}"
+  tags:
+   skip_ansible_lint
+  when: airflow_install.changed or airflow_config.changed
+  notify:
+    - restart airflow-webserver
+    - restart airflow-scheduler
+    - restart airflow-worker
+    - restart airflow-flower
+    
 
 - name: Airflow | Copy extra airflow config files (provided by playbooks)
   copy:
