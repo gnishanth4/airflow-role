@@ -42,6 +42,7 @@ default_timezone = {{ airflow_default_timezone }}
 # must supply a remote location URL (starting with either 's3://...' or
 # 'gs://...') and an Airflow connection id that provides access to the storage
 # location.
+remote_logging = {{ airflow_remote_logging }}
 remote_base_log_folder = {{ airflow_remote_base_log_folder }}
 remote_log_conn_id = {{ airflow_remote_log_conn_id }}
 # Use server-side encryption for logs stored in S3
