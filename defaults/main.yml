@@ -101,8 +101,9 @@ airflow_unit_test_mode: False
 airflow_plugins_folder: "{{ airflow_home }}/plugins"
 
 ## REMOTE LOGS
-airflow_remote_base_log_folder:
-airflow_remote_log_conn_id:
+airflow_remote_logging: True
+airflow_remote_base_log_folder: s3://airflow-niss/airflow-logs
+airflow_remote_log_conn_id: MyS3Conn
 airflow_encrypt_s3_logs: False
 airflow_s3_log_folder: # DEPRECATED
 
