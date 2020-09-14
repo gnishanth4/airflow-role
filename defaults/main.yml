@@ -171,8 +171,8 @@ airflow_webserver_default_dag_run_display_number: 25
 # - airflow.contrib.auth.backends.ldap_auth
 # - airflow.contrib.auth.backends.github_enterprise_auth
 # - others? :)
-airflow_webserver_authenticate: False
-airflow_webserver_auth_backend:
+airflow_webserver_authenticate: True
+airflow_webserver_auth_backend: airflow.contrib.auth.backends.password_auth
 
 ## LDAP (only applies if airflow_webserver_auth_backend == "airflow.contrib.auth.backends.ldap_auth")
 # Bear in mind that, starting with Airflow 1.10.0, PyPi package pyasn1 v0.4.4 is needed
