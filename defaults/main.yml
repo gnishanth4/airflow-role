@@ -160,7 +160,7 @@ airflow_webserver_demo_mode: False
 airflow_webserver_log_fetch_timeout_sec: 5
 airflow_webserver_hide_paused_dags_by_default: False
 airflow_webserver_page_size: 100
-airflow_webserver_rbac: "False"
+airflow_webserver_rbac: "True"
 airflow_webserver_navbar_color: "#007A87"
 airflow_webserver_default_dag_run_display_number: 25
 
@@ -171,7 +171,7 @@ airflow_webserver_default_dag_run_display_number: 25
 # - airflow.contrib.auth.backends.ldap_auth
 # - airflow.contrib.auth.backends.github_enterprise_auth
 # - others? :)
-airflow_webserver_authenticate: True
+airflow_webserver_authenticate: False
 airflow_webserver_auth_backend: airflow.contrib.auth.backends.password_auth
 
 ## LDAP (only applies if airflow_webserver_auth_backend == "airflow.contrib.auth.backends.ldap_auth")
