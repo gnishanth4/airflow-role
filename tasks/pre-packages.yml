@@ -1,0 +1,19 @@
+---
+# tasks file for pre-packages
+- name: update packages
+  command: apt update 
+
+- name: Install Python package
+  apt: name=python3 state=latest
+
+- name: Install Pip package
+  apt: name=python3-pip state=latest
+
+- name: Install werkzeug package
+  command: pip3 install werkzeug==0.16.0
+
+- name: Install python-mysqldb package
+  apt: name=python-mysqldb state=latest
+
+- name: Install apache-airflow[s3]
+  command: pip3 install apache-airflow[s3]  
