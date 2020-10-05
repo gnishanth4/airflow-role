@@ -1,5 +1,7 @@
 ---
-
+- name: Airflow | Prepackages
+  import_tasks: pre-packages.yml
+  
 - name: Airflow | Install
   import_tasks: install.yml
   tags:
